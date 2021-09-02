@@ -39,11 +39,21 @@ h4 {
     box-shadow: 0 0 31px -14px;
     display: flex;
     justify-content: space-between;
-    /* padding: 0.4em; */
+    align-items: center;
     height: 6em;
+    padding: 1rem;
+    transition: all 0.3s linear;
     position: sticky;
     top: 0;
     z-index: 100;
+}
+
+.hide-nav {
+    visibility: visible;
+}
+
+.menu {
+    visibility: hidden;
 }
 
 .logo-container img {
@@ -61,8 +71,10 @@ ul {
 
 .nav-left{
     width: 45%;
+    min-width: 650px;
     align-items: center;
     display: flex;
+    position: relative;
 }
 
 .nav-left ul {
@@ -83,6 +95,24 @@ ul {
     color: #c38e6e;
 }
 
+.nav-link {
+    /* color: yellow; */
+    position: relative;
+}
+
+.cart-item {
+    position: absolute;
+    top: -29px;
+    right: -14px;
+    font-size: 1rem;
+    background: #c38f6ea6;
+    text-align: center;
+    align-items: center;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    color: #fff;
+}
 
 /* SECTION1  */
 .sect1 {
@@ -377,7 +407,7 @@ figure {
     position: absolute;
     background: #e5d0bb url(https://cdn.shopify.com/s/files/1/0275/7784/3817/files/woodgrain-default.svg?v=1615322353);
     width: 100%;
-    height: 30%;
+    height: 40%;
     z-index: -1;
     margin-top: 12.6em;
     background-size: 200%;
@@ -529,7 +559,7 @@ figure {
 .sect4 {
     display: flex;
     flex-direction: column;
-    height: 700px;
+    height: 670px;
     /* background: bisque; */
 
 }
@@ -598,7 +628,7 @@ figure {
  .test-body {
      width: 58%;
     margin-left: 50px;
-    margin-top: 88px;
+    margin-top: 40px;
  }
 
  .img-cont {
@@ -709,8 +739,8 @@ figure {
 
  form span a {
     position: absolute;
-    top: 49%;
-    font-size: 14px;
+    top: 55%;
+    font-size: 12px;
     margin-left: 77px;
     text-decoration: none;
     color: #7a7a7a;
@@ -825,16 +855,290 @@ figure {
     height: 100vh;
 }
 
+.img-card-cnt {
+    height: 200px;
+    width: 200px;
+}
+
+.img-card{
+    width: 100%;
+    height: 100%;
+    transition: 0.3s linear;
+}
+
+.img-card:hover{
+    transform: scale(120%);
+}
 
 
-@media (max-width:700px) {
-.nav-left{
+.product-cnt {
+display: flex;
+margin: 4em;
+}
+
+.products, .page1, .page2, .page3, .page4 {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 400px;
+    justify-content: space-around;
+    padding: 2em;
+}
+
+.prd-card {
+    width: 350px;
+    /* background: antiquewhite; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2em;
+    /* transition: all 3s linear; */
+}
+
+.prd-card h4 {
+    font-size: 2em ;
+    margin-bottom: 0;
+}
+
+
+.prd-card button {
+    background: black;
+    color: #fff;
+    height: 30px;
+    width: 250px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin: 35px auto;
+}
+
+.prd-card button:hover {
+    background: #c2a284;
+}
+.old-price {
+    text-decoration: line-through;
+    color: #8f8f8f;
+    display: inline;
+}
+
+.main-cnt{
+    height: 220vh;
+    width: 75vw;
+    padding: 2em;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+        
+.pages {
+    position: absolute;
+    /* background: #f7f7f7; */
+    bottom: -80em;
+    left: 55em;
+    width: 223px;
+}
+        
+
+.pages ul {
+    display: flex;
+    /* position: absolute; */
+    bottom: -41em;
+    align-items: center;
+    padding: 0;
+    /* left: 24em; */
+}
+
+.pages li {
+    /* margin: 0 1px; */
+    padding: 0;
+    text-decoration: none;
+    margin-right: 7px;
+    background: white;
+    border: 1px solid rgb(97, 95, 95);
+}
+
+.next-page {
+    padding: 0 13px;
+}
+
+.pagination li a {
+    list-style: none;
+    text-decoration: none;
+    color: #8f8f8f;
+    /* border: 1px solid; */
+}
+
+.pages li:hover {
+    background: #c2a284;
+    color: #fff;
+}
+
+/* side menu */
+
+/* #accordian a:not(:only-child):after {
+    content: "\f067";
+    font-family: fontawesome;
+    position: absolute;
+    left: 85%;
+    width: 30px;
+    text-align: center;
+    font-size: 14px;
+    pointer-events: none;
+    
+} */
+
+.sidebar_title{
+    font-size: 1.2em;
+    margin-bottom: 16px;
+    border-left: 5px solid #e9e9e9;
+    padding-left: 5px;
+}
+
+.side-ul {
+    margin-top: 0;
+    padding: 0;
+    /* background: rgb(194, 194, 207); */
+}
+
+.side-cnt {
+    padding: 21px;
+}
+
+.top-li {
+    position: relative;
+    
+}
+
+.top-li a, .li a {
+    text-decoration: none;
+    color: #43484e;
+    /* color: #fff; */
+}
+
+.soap a{
+    border: 1px solid #8f8f8f;
+    padding: 0 5px;
+}
+
+.li a:hover {
+    color: #fff;
+    background: #c2a284;
+}
+
+
+ .plus {
+    /* content: "\f067"; */
+    position: absolute;
+    top: 7px;
+    left: 90%;
+    /* align-items: center; */
+    text-align: center;
+    justify-content:center ;
+ }
+/* 
+.top-li:hover .inner-li {
+    height: 0;
+} */
+
+.inner-li {
+    width: 146px;
+    background: beige;
+    height: 2em;
+    opacity: 1;
+}
+
+
+/* price div */
+.price-ul {
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.price-list:not(:only-child) 
+
+.price-list {
+    width: 100px;
+    /* border: 1px solid #8f8f8f; */
+    
+   
+}
+
+.price-list a {
+    margin-right: 9px;
+    text-decoration: none;
+    border: 1px solid #8f8f8f;
+    color:  #43484e;
+    padding: 0 3px;
+
+}
+/* main header top */
+.list-grid {
+    border: 1px solid rgb(224 224 224);
+    width: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-head {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(224 224 224);
+    padding: 20px 0;
+}
+
+.hide {
     display: none;
 }
 
+.grid:focus {
+background: #c2a284;
+}
+
+.grid img ::after{
+    content:'';
+    background: #c2a284;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+}
+
+.list:hover {
+    background: #c2a284;  
+}
+
+
+
+
+@media (max-width:700px) {
+.hide-nav {
+visibility: hidden;
+}
+
+.menu {
+   visibility: visible;
+}
+.nav-left {
+        align-items: center;
+        margin-left: 7rem;
+}
+
+.mob-cart{
+    position: absolute;
+}
+
+.nav-left ul{
+   width: 107px;
+   align-items: center;
+}
+
 .logo-container img {
-    height: 3em;
-    padding-left: 1em;
+       height: 8em;
+       width: auto;
+       padding-left: 1em;
 }
 
 .hero-brg img{
@@ -991,7 +1295,5 @@ figure {
 /* .sect2-cards {
     background: #e5d0bb url(https://cdn.shopify.com/s/files/1/0275/7784/3817/files/woodgrain-default.svg?v=1615322353);
     /* width: 100%; */
-*/
-
-
 }
+

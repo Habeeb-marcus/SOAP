@@ -9,7 +9,16 @@
       rel="stylesheet"> -->
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect dns-prefetch" href="https://fonts.shopifycdn.com">
+  <!-- font awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat%3A300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i%7CPrata%3A300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i%7CAmatic%20SC%3A300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i%26amp%3Bsubset%3Dlatin%2Clatin-ext%7CMontserrat%3A200%2C200i%2C300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i%2C800%2C800i%2C900%2C900i%7CPrata%3A200%2C200i%2C300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i%2C800%2C800i%2C900%2C900i%7CAmatic%20SC%3A200%2C200i%2C300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i%2C800%2C800i%2C900%2C900i%7CRoboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%20Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CMontserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<!-- box-icons -->
+<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+<!-- glide js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.js">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.css">
+
 </head>
 <body>
     <div class="app">
@@ -28,14 +37,19 @@
 
             <div class="nav-left">
                 <ul>
-                    <li id="land"><a  href="#" class="nav-link">HOME</a></li>
-                    <li><a id="catalog" href="#" class="nav-link">CATALOG</a></li>
-                    <li><a href="#" class="nav-link">CONTACT US</a></li>
-                    <li id="login"><a href="#" class="nav-link">LOG IN</a></li>
-                    <li><a class="nav-link" href="#">
-                        <img src="./assets/icons/shopping_cart_black_24dp.svg" alt="" class="cart">
+                    <li id="land"><a  href="#" class="nav-link hide-nav">HOME</a></li>
+                    <li><a id="catalog" href="#" class="nav-link hide-nav">CATALOG</a></li>
+                    <li><a href="#" class="nav-link hide-nav">CONTACT US</a></li>
+                    <li id="login"><a href="#" class="nav-link hide-nav">LOG IN</a></li>
+                    <li class="mob-cart"><a class="nav-link" href="#">
+                        <i class="fas fa-cart-plus" class="cart"></i>
+                        <div class="cart-item">0</div>
                     </a></li>
                 </ul>
+
+                <span>
+                    <i class="fas fa-bars menu"></i>
+                </span>
             </div>
         </div>
 
@@ -103,7 +117,6 @@
                 </div>
             </div> -->
         </section>
-
 
         <!-- SECTION 3 -->
         <section class="sect3 ">      <!--id="catalog"-->
@@ -219,6 +232,8 @@
             </div>
         </section>
 
+
+        <!-- SECTION 4 -->
         <section class="sect4 ">
             <h2>LET'S OUR CUSTOMER SPEAK FOR US</h2>
 
@@ -297,7 +312,7 @@
 
             <form class="login">
                 <input type="text" for="email" placeholder="Email" id="email">
-                <input type="text" for="password" placeholder="Password" id="password">
+                <input type="password" for="password" placeholder="Password" id="password" required>
                 <span><a href="#">Forgot password?</a></span>
 
                 <!-- <input type="login" value="LOGIN"> -->
@@ -324,30 +339,385 @@
     <div class="product-cnt">
         
         <!-- side bars -->
-        <div class="side-cnt"></div>
+        <div class="side-cnt">
+            <!-- category -->        
+
+            <div class="filter-panel-menu">
+                   <h5 class="sidebar_title">Category</h5>
+                <div class="filter-panel" id="accordian">
+                <ul class="side-ul">
+
+                  <li class="top-li">
+                    <a href="/collections/germ-protection">Glycerine Soap</a>
+                    <i class="far fa-plus plus"></i>
+                    <ul class="inner-ul">  
+                      <li class="inner-li"><a href="/products/charcoal-brick-soap">Charcoal Brick Soap</a></li>             
+                    </ul>
+                  </li>
+                  
+                                 
+                  <li class="top-li">
+                    <a href="/collections/herbal-soap">Neem Soap </a> 
+                    <i class="far fa-plus plus"></i>
+                    <ul class="inner-ul">   
+                      <li class="inner-li"><a href="/products/citrus-honey-soap">Citrus &amp; Honey Soap</a></li>  
+                    </ul>
+                  </li>
+                  
+                
+                  <li class="top-li">
+                    <a href="/collections/luxury-fragrance">Tea Tree Oil Soap </a>
+                    <i class="far fa-plus plus plus"></i>
+                    <ul class="inner-ul">            
+                      <li class="inner-li"><a href="/products/cucumber-soap">Cucumber Soap</a></li>
+                    </ul>
+                  </li>
+                  
+
+                  <li class="top-li">
+                    <a href="#"> Almond Oil  Soap</a>
+                    <i class="far fa-plus plus"></i>
+                    <ul class="inner-ul">                
+                      <li class="inner-li"><a href="/products/raspberry-soap">Raspberry Soap</a></li>  
+                    </ul>
+                  </li>
+                  
+                  
+                </ul>
+              </div>
+            </div>
+
+            <!-- price range -->
+            <div class="filter-panel-tag"><h5 class="sidebar_title">Shop By Price</h5>
+                <div class="filter-panel">
+                <ul class="price-ul">
+                  <li class="price-list li"><a href="" class="dT_CollectionFilter" data-value="100-200">$100 - $200</a></li>           
+                  <li class="price-list li"><a href="" class="dT_CollectionFilter" data-value="200-300">$200 - $300</a></li>        
+                  <li class="price-list li"><a href="" class="dT_CollectionFilter" data-value="700-1000">$700 - $1000</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- shop by type -->
+            <div class="filter-panel-tag"><h5 class="sidebar_title">Shop By Type</h5><div class="filter-panel">
+                <ul>
+                  <li class="Organic Soap li"><a href="" class="dT_CollectionFilter" data-value="organic-soap">Organic Soap</a></li>        
+                  <li class="Handmade Soap li"><a href="" class="dT_CollectionFilter" data-value="handmade-soap">Handmade Soap</a></li>
+                </ul>
+              </div>
+            </div>
+        </div>
 
 
         <!-- main product container -->
         <div class="main-cnt">
-
+            <div class="main-head">
+                <div class="list-grid">
+                    <div class="grid">
+                      <img src="./assets/icons/apps_black_24dp (1).svg" alt="">
+                   </div>
+                   <div class="list">
+                     <img src="./assets/icons/view_list_black_24dp.svg" alt="">
+                   </div>
+                </div>
+                <div class="sort-by">
+                    Sort-by:
+                    <select name="sort-by" id="sort-by">
+                        <option value="title ascending">Alphabetical, A-Z</option>
+                        <option value="title descending">Alphabetical, Z-A</option>
+                        <option value="price ascending">Price, low-high</option>
+                        <option value="price descending">Price, high-low</option>
+                        <option value="created ascending">Date, old-new</option>
+                        <option value="created descending">Date, new-old</option>
+                    </select>
+                </div>
+             </div>
+             
+            
             <!-- product cards -->
             <div class="products">
-                <div class="prd-card">
-                    <div class="img-card-cnt">
-                        <img  class="img-card" src="./assets/products/" alt="">
-                    </div>
-                    <h4 class="prd-title">Orchid Soap</h4>
-                    <div class="price">$24.00</div>
-                    <button class="add-cart">Add to cart</button>
 
-                </div>
+                <!-- page 1 -->
+               <!-- <div class="page1" id="page1"> -->
+
+                    <div class="prd-card">
+                        <div class="img-card-cnt">
+                            <img class="img-card" src="./assets/products/Soap1.jpeg" alt="">
+                        </div>
+                        <h4 class="prd-title">Orchid Soap</h4>
+                        <div class="price">$24.00</div>
+                        <button class="add-cart">Add to cart</button>
+                    </div>
+<!-- 
+                    <div class="prd-card">
+                        <div class="img-card-cnt">
+                            <img class="img-card" src="./assets/products/soap2.jpeg" alt="">
+                        </div>
+                        <h4 class="prd-title">Cucumber Soap</h4>
+                        <div class="price"> <span class="old-price">$34.00</span> $24.00</div> 
+                        <button class="add-cart">Add to cart</button>
+                    </div>
+
+                    <div class="prd-card">
+                        <div class="img-card-cnt">
+                            <img class="img-card" src="./assets/products/Soap3.jpeg" alt="">
+                        </div>
+                        <h4 class="prd-title">Citrus & Honey Soap</h4>
+                        <div class="price">$24.00</div>
+                        <button class="add-cart">Add to cart</button>
+                    </div>
+
+                    <div class="prd-card">
+                        <div class="img-card-cnt">
+                            <img class="img-card" src="./assets/products/Soap4.jpeg" alt="">
+                        </div>
+                        <h4 class="prd-title">Charcoal Brick Soap</h4>
+                        <div class="price">$34.00</div>
+                        <button class="add-cart">Add to cart</button>
+                    </div>
+
+                    <div class="prd-card">
+                        <div class="img-card-cnt">
+                            <img class="img-card" src="./assets/products/Soap5.jpeg" alt="">
+                        </div>
+                        <h4 class="prd-title">Lavender Soap</h4>
+                        <div class="price">$24.00</div>
+                        <button class="add-cart">Add to cart</button>
+                    </div>
+
+
+                    <div class="prd-card">
+                        <div class="img-card-cnt">
+                            <img class="img-card" src="./assets/products/Soap6.jpeg" alt="">
+                        </div>
+                        <h4 class="prd-title">Lavim Soap</h4>
+                        <div class="price">$24.00</div>
+                        <button class="add-cart">Add to cart</button>
+                    </div> -->
+               <!-- </div> -->
+
+
+               <!-- page 2 -->
+               <!-- <div class="page2 hide" id="page2" hidden > -->
+                    <!-- <div class="prd-card">
+                        <div class="img-card-cnt">
+                            <img class="img-card" src="./assets/products/Soap7.jpeg" alt="">
+                        </div>
+                        <h4 class="prd-title">Green tea Soap</h4>
+                        <div class="price">$24.00</div>
+                        <button class="add-cart">Add to cart</button>
+                    </div>
+
+
+
+                    <div class="prd-card">
+                        <div class="img-card-cnt">
+                            <img class="img-card" src="./assets/products/Soap8.jpeg" alt="">
+                        </div>
+                        <h4 class="prd-title">Sandal Soap</h4>
+                        <div class="price">$24.00</div>
+                        <button class="add-cart">Add to cart</button>
+                    </div>
+
+
+                    <div class="prd-card">
+                        <div class="img-card-cnt">
+                            <img class="img-card" src="./assets/products/Soap9.jpeg" alt="">
+                        </div>
+                        <h4 class="prd-title">Green Mint Soap</h4>
+                        <div class="price">$54.00</div>
+                        <button class="add-cart">Add to cart</button>
+                    </div>
+
+                    <div class="prd-card">
+                        <div class="img-card-cnt">
+                            <img class="img-card" src="./assets/products/soap10.jpeg" alt="">
+                        </div>
+                        <h4 class="prd-title">Shea Butter Soap</h4>
+                        <div class="price">$24.00</div>
+                        <button class="add-cart">Add to cart</button>
+                    </div>
+
+                    <div class="prd-card">
+                        <div class="img-card-cnt">
+                            <img class="img-card" src="./assets/products/soap11a.jpeg" alt="">
+                        </div>
+                        <h4 class="prd-title">Apple Old Soap</h4>
+                        <div class="price"></div>
+                        <button class="add-cart">Add to cart</button>
+                    </div>
+
+
+                    <div class="prd-card">
+                        <div class="img-card-cnt">
+                            <img class="img-card" src="./assets/products/soap12.jpeg" alt="">
+                        </div>
+                        <h4 class="prd-title">Orchid Soap</h4>
+                        <div class="price">$24.00</div>
+                        <button class="add-cart">Add to cart</button>
+                    </div> -->
+                <!-- </div> -->
+
+
+               <!-- page 3 -->
+               <!-- <div class="page3 hide" id="page3" hidden> -->
+                    <!-- <div class="prd-card">
+                        <div class="img-card-cnt">
+                            <img class="img-card" src="./assets/products/Soap7.jpeg" alt="">
+                        </div>
+                        <h4 class="prd-title">Green tea Soap</h4>
+                        <div class="price">$24.00</div>
+                        <button class="add-cart">Add to cart</button>
+                    </div>
+
+
+
+                    <div class="prd-card">
+                        <div class="img-card-cnt">
+                            <img class="img-card" src="./assets/products/Soap8.jpeg" alt="">
+                        </div>
+                        <h4 class="prd-title">Sandal Soap</h4>
+                        <div class="price">$24.00</div>
+                        <button class="add-cart">Add to cart</button>
+                    </div>
+
+
+                    <div class="prd-card">
+                        <div class="img-card-cnt">
+                            <img class="img-card" src="./assets/products/Soap9.jpeg" alt="">
+                        </div>
+                        <h4 class="prd-title">Green Mint Soap</h4>
+                        <div class="price">$54.00</div>
+                        <button class="add-cart">Add to cart</button>
+                    </div>
+
+                    <div class="prd-card">
+                        <div class="img-card-cnt">
+                            <img class="img-card" src="./assets/products/soap10.jpeg" alt="">
+                        </div>
+                        <h4 class="prd-title">Shea Butter Soap</h4>
+                        <div class="price">$24.00</div>
+                        <button class="add-cart">Add to cart</button>
+                    </div>
+
+                    <div class="prd-card">
+                        <div class="img-card-cnt">
+                            <img class="img-card" src="./assets/products/soap11a.jpeg" alt="">
+                        </div>
+                        <h4 class="prd-title">Apple Old Soap</h4>
+                        <div class="price">$24.00</div>
+                        <button class="add-cart">Add to cart</button>
+                    </div>
+
+
+                    <div class="prd-card">
+                        <div class="img-card-cnt">
+                            <img class="img-card" src="./assets/products/soap12.jpeg" alt="">
+                        </div>
+                        <h4 class="prd-title">Orchid Soap</h4>
+                        <div class="price">$24.00</div>
+                        <button class="add-cart">Add to cart</button>
+                    </div> -->
+            <!-- </div> -->
+
+
+               <!-- page 4 -->
+               <!-- <div class="page4 hide" id="page4" hidden> -->
+                    <!-- <div class="prd-card">
+                        <div class="img-card-cnt">
+                            <img class="img-card" src="./assets/products/Soap7.jpeg" alt="">
+                        </div>
+                        <h4 class="prd-title">Green tea Soap</h4>
+                        <div class="price">$24.00</div>
+                        <button class="add-cart">Add to cart</button>
+                    </div>
+
+
+
+                    <div class="prd-card">
+                        <div class="img-card-cnt">
+                            <img class="img-card" src="./assets/products/Soap8.jpeg" alt="">
+                        </div>
+                        <h4 class="prd-title">Sandal Soap</h4>
+                        <div class="price">$24.00</div>
+                        <button class="add-cart">Add to cart</button>
+                    </div>
+
+
+                    <div class="prd-card">
+                        <div class="img-card-cnt">
+                            <img class="img-card" src="./assets/products/Soap9.jpeg" alt="">
+                        </div>
+                        <h4 class="prd-title">Green Mint Soap</h4>
+                        <div class="price">$54.00</div>
+                        <button class="add-cart">Add to cart</button>
+                    </div>
+
+                    <div class="prd-card">
+                        <div class="img-card-cnt">
+                            <img class="img-card" src="./assets/products/soap10.jpeg" alt="">
+                        </div>
+                        <h4 class="prd-title">Shea Butter Soap</h4>
+                        <div class="price">$24.00</div>
+                        <button class="add-cart">Add to cart</button>
+                    </div>
+
+                    <div class="prd-card">
+                        <div class="img-card-cnt">
+                            <img class="img-card" src="./assets/products/soap11a.jpeg" alt="">
+                        </div>
+                        <h4 class="prd-title">Apple Old Soap</h4>
+                        <div class="price">$24.00</div>
+                        <button class="add-cart">Add to cart</button>
+                    </div>
+
+
+                    <div class="prd-card">
+                        <div class="img-card-cnt">
+                            <img class="img-card" src="./assets/products/soap12.jpeg" alt="">
+                        </div>
+                        <h4 class="prd-title">Orchid Soap</h4>
+                        <div class="price">$24.00</div>
+                        <button class="add-cart">Add to cart</button>
+                    </div> -->
+                <!-- </div> -->
+            </div>
+
+            <!-- <div class="pagenumbers" id="pagination">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+            </div> -->
+
+            <!-- <nav aria-label="pagination">
+                <ul class="pagination">
+                    <li><a href=""><span aria-hidden="true">«</span><span class="visuallyhidden">previous set of pages</span></a></li>
+                    <li><a href="#page1"><span class="visuallyhidden">1</span></a></li>
+                    <li><a href="#page2" aria-current="page"><span class="visuallyhidden"> 2</span></a></li>
+                    <li><a href="#page3"><span class="visuallyhidden">3</span></a></li>
+                    <li><a href="#page4"><span class="visuallyhidden">4</span></a></li>
+                    <li><a href=""><span class="visuallyhidden">next set of pages</span><span aria-hidden="true">»</span></a></li>
+                </ul>
+            </nav> -->
+
+            <div class="pages">
+                <ul>
+                    <li class="page1">1</li>
+                    <li class="page2">2</li>
+                    <li class="page3">3</li>
+                    <li class="page4">4</li>
+                    <li class="next-page"> > </li>
+                </ul>
             </div>
         </div>
     </div>
 
 </div>
 
-<!-- FOOTER -->
+
+
+        <!-- FOOTER -->
 
     <div class="btm-con">
         <div class="bottom-pg">
@@ -392,8 +762,8 @@
                 <div class="subcribe">
                     <h2 class="fit">Get the freshest news, straight to your inbox!</h2>
                     <form action="">
-                        <label for="email" class="sub-lab">
-                            <input type="text" class="sub-inp" id="email" placeholder="Enter your email address">
+                        <label for="email-foot" class="sub-lab">
+                            <input type="text" class="sub-inp" id="email-foot" placeholder="Enter your email address">
                             <span><button>SUBSCRIBE</button></span>
                         </label>
                     </form>
@@ -417,7 +787,16 @@
     </div>
 
     </div>
-    
+
+    <script src="app.js"></script>
+    <!-- glide.js -->
+   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.js" ></script> -->
+
+   <!-- index.js -->
+   <!-- <script src="./js/index.js"></script> -->
+
+   <!-- slider.js -->
+   <!-- <script src="./js/slider.js"></script> -->
 </body>
-<script src="app.js"></script>
+
 </html>

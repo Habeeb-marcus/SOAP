@@ -1,0 +1,146 @@
+ [
+    {
+        "url" : "./assets/products/Soap1.jpeg",
+        "product-title": "Orchid Soap",
+        "price": 24.00,
+        "button": "Add to cart"
+    },
+     {
+        "url" : "./assets/products/soap2.jpeg",
+        "product-title": "Cucumber Soap",
+        "price": 34.00,
+        "button": "Add to cart" 
+    },
+     {
+        "url" : "./assets/products/soap3.jpeg",
+        "product-title": "Citrus & Honey Soap",
+        "price": 29.00,
+        "button": "Add to cart" 
+    },
+     {
+        "url" : "./assets/products/Soap4.jpeg",
+        "product-title": "Charcoal Brick Soap",
+        "price": 45.00,
+        "button": "Add to cart" 
+    },
+     {
+        "url" : "./assets/products/Soap5.jpeg",
+        "product-title": "Lavender Soap",
+        "price": 34.00,
+        "button": "Add to cart" 
+    },
+     {
+        "url" : "./assets/products/Soap6.jpeg",
+        "product-title": "Lavim Soap",
+        "price": 24.00,
+        "button": "Add to cart" 
+    },
+     {
+        "url" : "./assets/products/Soap7.jpeg",
+        "product-title": "Green tea Soap",
+        "price": 20.00,
+        "button": "Add to cart" 
+    },
+     {
+        "url" : "./assets/products/Soap8.jpeg",
+        "product-title": "Sandal Soap",
+        "price": 23.00,
+        "button": "Add to cart" 
+    },
+     {
+        "url" : "./assets/products/Soap9.jpeg",
+        "product-title": "Green Mint Soap",
+        "price": 54.00,
+        "button": "Add to cart" 
+    },
+     {
+        "url" : "./assets/products/soap10.jpeg",
+        "product-title": "Shea Butter Soap",
+        "price": 68.00,
+        "button": "Add to cart" 
+    },
+     {
+        "url" : "./assets/products/soap11a.jpeg",
+        "product-title": "Apple Old Soap",
+        "price": 110.00,
+        "button": "Add to cart" 
+    },
+     {
+        "url" : "./assets/products/soap12.jpeg",
+        "product-title": "Orchid dudu Soap",
+        "price": 64.00,
+        "button": "Add to cart" 
+    },
+    {
+        "url" : "./assets/products/Soap1.jpeg",
+        "product-title": "Orchid Soap",
+        "price": 24.00,
+        "button": "Add to cart" 
+    },
+     {
+        "url" : "./assets/products/soap2.jpeg",
+        "product-title": "Cucumber Soap",
+        "price": 34.00,
+        "button": "Add to cart" 
+    },
+     {
+        "url" : "./assets/products/soap3.jpeg",
+        "product-title": "Citrus & Honey Soap",
+        "price": 29.00,
+        "button": "Add to cart" 
+    },
+     {
+        "url" : "./assets/products/Soap4.jpeg",
+        "product-title": "Charcoal Brick Soap",
+        "price": 45.00,
+        "button": "Add to cart" 
+    },
+     {
+        "url" : "./assets/products/Soap5.jpeg",
+        "product-title": "Lavender Soap",
+        "price": 34.00,
+        "button": "Add to cart" 
+    },
+     {
+        "url" : "./assets/products/Soap6.jpeg",
+        "product-title": "Lavim Soap",
+        "price": 24.00,
+        "button": "Add to cart" 
+    },
+     {
+        "url" : "./assets/products/Soap7.jpeg",
+        "product-title": "Green tea Soap",
+        "price": 20.00,
+        "button": "Add to cart" 
+    },
+     {
+        "url" : "./assets/products/Soap8.jpeg",
+        "product-title": "Sandal Soap",
+        "price": 23.00,
+        "button": "Add to cart" 
+    },
+     {
+        "url" : "./assets/products/Soap9.jpeg",
+        "product-title": "Green Mint Soap",
+        "price": 54.00,
+        "button": "Add to cart"
+    },
+     {
+        "url" : "./assets/products/soap10.jpeg",
+        "product-title": "Shea Butter Soap",
+        "price": 68.00,
+        "button": "Add to cart" 
+    },
+     {
+        "url" : "./assets/products/soap11a.jpeg",
+        "product-title": "Apple Old Soap",
+        "price": 110.00,
+        "button": "Add to cart" 
+    },
+     {
+        "url" : "./assets/products/soap12.jpeg",
+        "product-title": "Orchid dudu Soap",
+        "price": 64.00,
+        "button": "Add to cart" 
+    } 
+ ]
